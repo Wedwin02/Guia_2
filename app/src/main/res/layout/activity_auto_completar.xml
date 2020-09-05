@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
     android:orientation="vertical"
     tools:context=".AutoCompletar">
 
@@ -77,6 +78,7 @@
             android:id="@+id/txbLP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <ProgressBar
@@ -95,6 +97,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="Procesar_onclick"
         android:text="@string/procesar"
         android:textSize="20dp"
         android:textStyle="bold" />

@@ -4,4 +4,13 @@
     <string name="a">Digite su animal favorito:</string>
     <string name="lp">Lenguaje de programacion:</string>
     <string name="procesar">Procesar</string>
+    <string name="limpiar">Limpiar </string>
+    <string name="Salir">Salir</string>
+
+    //login
+    <string name="datos">Ingrese sus Datos </string>
+    <string name="iniciar">Iniciar Session</string>
+
+
+
 </resources>

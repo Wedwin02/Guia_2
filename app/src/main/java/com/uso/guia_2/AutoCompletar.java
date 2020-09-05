@@ -53,16 +53,18 @@ public class AutoCompletar extends AppCompatActivity {
     }
 
 
+
+
     private void LLenarDatos(){
         AdaptadorL = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, this.Lenguaje);
         AdaptadorF = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, this.Fruta);
-        AdaptadorA = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,this.Animal);
+        AdaptadorA = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,this.Animal);
 
-        txbLenguajeP.setThreshold(2);
+        txbLenguajeP.setThreshold(1);
         txbLenguajeP.setAdapter(AdaptadorL);
-        txbFruta.setThreshold(2);
+        txbFruta.setThreshold(1);
         txbFruta.setAdapter(AdaptadorF);
-        txbAnimal.setThreshold(2);
+        txbAnimal.setThreshold(1);
         txbAnimal.setAdapter(AdaptadorA);
 
 
@@ -81,9 +83,11 @@ public class AutoCompletar extends AppCompatActivity {
                     public void run() {
                         barra.setProgress(Contador);
                         if (Contador == 100){
-                            Toast.makeText(AutoCompletar.this,"Lenguaje" + txbLenguajeP.getText().toString(),Toast.LENGTH_SHORT).show();
-                            Toast.makeText(AutoCompletar.this,"Fruta" + txbFruta.getText().toString(),Toast.LENGTH_SHORT).show();
-                            Toast.makeText(AutoCompletar.this,"Animal" + txbAnimal.getText().toString(),Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(AutoCompletar.this,"Fruta " + txbFruta.getText().toString(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AutoCompletar.this,"Animal " + txbAnimal.getText().toString(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AutoCompletar.this,"Lenguaje " + txbLenguajeP.getText().toString(),Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 });
@@ -96,7 +100,7 @@ public class AutoCompletar extends AppCompatActivity {
 
     private void metodoEspera(){
         try{
-            Thread.sleep(500);
+            Thread.sleep(100);
             Contador++;
         } catch (Exception e) {
 
