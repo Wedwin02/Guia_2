@@ -49,7 +49,23 @@ public class AutoCompletar extends AppCompatActivity {
     }
     public  void Procesar_onclick(View v){
 
-        new Thread(new ProcesoSecundario()).start();
+       if(validar()){
+           new Thread(new ProcesoSecundario()).start();
+       }else {
+           Toast.makeText(AutoCompletar.this,"Campos requeridos",Toast.LENGTH_SHORT).show();
+       }
+    }
+
+    private Boolean validar(){
+        boolean retorno = true;
+
+
+
+        if(txbFruta.getText().toString().trim().length() == 0 || txbAnimal.getText().toString().trim().length() == 0 || txbLenguajeP.getText().toString().trim().length() == 0){
+           retorno = false;
+        }
+
+        return retorno;
     }
 
 
@@ -84,9 +100,9 @@ public class AutoCompletar extends AppCompatActivity {
                         barra.setProgress(Contador);
                         if (Contador == 100){
 
-                            Toast.makeText(AutoCompletar.this,"Fruta " + txbFruta.getText().toString(),Toast.LENGTH_SHORT).show();
-                            Toast.makeText(AutoCompletar.this,"Animal " + txbAnimal.getText().toString(),Toast.LENGTH_SHORT).show();
-                            Toast.makeText(AutoCompletar.this,"Lenguaje " + txbLenguajeP.getText().toString(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AutoCompletar.this,"Fruta : " + txbFruta.getText().toString(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AutoCompletar.this,"Animal : " + txbAnimal.getText().toString(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AutoCompletar.this,"Lenguaje de programación : " + txbLenguajeP.getText().toString(),Toast.LENGTH_SHORT).show();
 
                         }
                     }

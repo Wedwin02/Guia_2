@@ -55,6 +55,8 @@
             android:onClick="IniciarSession_onClick"
             android:text="@string/iniciar"
             android:textSize="20dp"
+            android:background="@drawable/colorplantilla"
+            android:textColor="@drawable/txt_cambio"
             android:textStyle="bold" />
     </LinearLayout>
 
