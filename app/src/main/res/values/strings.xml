@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Guia_2</string>
+    <string name="d">Digite su fruta favorita:</string>
+    <string name="a">Digite su animal favorito:</string>
+    <string name="lp">Lenguaje de programacion:</string>
+    <string name="procesar">Procesar</string>
 </resources>
